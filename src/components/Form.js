@@ -63,15 +63,17 @@ function Form() {
         />
         <br />
         <input
-            type="text"
-            value={contactNumber}
-            onChange={(e) => setContactNumber(e.target.value)}
-            placeholder="Contact Number"
-            pattern="[0-9]*"
-            onInvalid={(e) => e.target.setCustomValidity('Please enter only numbers')}
-            onInput={(e) => e.target.setCustomValidity('')}
-            className="input-field"
+          type="text"
+          value={contactNumber}
+          onChange={(e) => setContactNumber(e.target.value)}
+          placeholder="Contact Number"
+          pattern="[0-9]*"
+          onInvalid={(e) => e.target.setCustomValidity('Please enter only numbers')}
+          onInput={(e) => e.target.setCustomValidity('')}
+          inputMode="numeric" // Add this line to specify the input mode
+          className="input-field"
         />
+
         <button className='submitbutton' type="submit">Submit</button>
       </form>
       <table>
